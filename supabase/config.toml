@@ -1,0 +1,10 @@
+project_id = "tka-cerdas"
+
+[functions.start-attempt]
+verify_jwt = true
+[functions.get-attempt]
+verify_jwt = true
+[functions.submit-attempt]
+verify_jwt = true
+[functions.manage-user]
+verify_jwt = true
