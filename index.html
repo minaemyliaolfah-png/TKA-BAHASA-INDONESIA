@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Platform belajar, latihan, dan tryout persiapan TKA.">
+  <meta name="theme-color" content="#112c46">
+  <title>TKA Cerdas — Ruang Belajar Siswa</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23112c46'/%3E%3Cpath d='M14 19h36v8H36v24h-8V27H14z' fill='%23f4c95d'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+  <div id="toast-region" class="toast-region" aria-live="polite"></div>
+  <section id="auth-screen" class="auth-shell">
+    <div class="auth-brand">
+      <div class="brand-mark">T</div>
+      <p class="eyebrow">PERSIAPAN TKA</p>
+      <h1>Belajar terarah.<br><span>Naikkan kemampuan.</span></h1>
+      <p class="auth-copy">Materi, latihan adaptif, mini tryout, dan analisis kelemahan dalam satu ruang belajar.</p>
+      <div class="auth-stats"><span><b>5–15</b> soal latihan</span><span><b>Real-time</b> progres</span></div>
+    </div>
+    <form id="login-form" class="auth-card">
+      <div><p class="eyebrow navy">AKUN SISWA</p><h2>Masuk untuk melanjutkan</h2><p>Gunakan username/NIS dan password dari sekolah.</p></div>
+      <label>Username / NIS / Email<input id="login-username" autocomplete="username" required placeholder="Contoh: 240018"></label>
+      <label>Password<div class="password-field"><input id="login-password" type="password" autocomplete="current-password" required placeholder="Masukkan password"><button type="button" class="icon-button" id="toggle-password" aria-label="Tampilkan password">◉</button></div></label>
+      <button class="button primary wide" type="submit"><span>Masuk</span><span aria-hidden="true">→</span></button>
+      <p id="login-error" class="form-error hidden" role="alert"></p>
+      <a href="./admin.html" class="text-link center">Masuk sebagai guru/admin</a>
+    </form>
+  </section>
+
+  <div id="app-shell" class="app-shell hidden">
+    <aside class="sidebar">
+      <a class="logo" href="#dashboard"><span class="brand-mark small">T</span><span>TKA <b>Cerdas</b></span></a>
+      <nav id="desktop-nav" class="main-nav" aria-label="Navigasi utama"></nav>
+      <div class="sidebar-foot"><div class="user-chip"><span id="sidebar-initial">S</span><div><b id="sidebar-name">Siswa</b><small id="sidebar-class">Kelas</small></div></div><button id="logout-button" class="icon-button" title="Keluar" aria-label="Keluar">↪</button></div>
+    </aside>
+    <main class="main-area">
+      <header class="topbar"><button id="mobile-menu" class="icon-button mobile-only" aria-label="Buka menu">☰</button><div><p id="page-kicker" class="eyebrow navy">RUANG BELAJAR</p><h1 id="page-title">Beranda</h1></div><div class="top-actions"><div class="streak-pill">🔥 <b id="streak-count">0</b> hari</div><button id="profile-button" class="avatar-button" aria-label="Buka profil">S</button></div></header>
+      <section id="view" class="view" tabindex="-1"></section>
+    </main>
+    <nav id="mobile-nav" class="bottom-nav" aria-label="Navigasi seluler"></nav>
+  </div>
+
+  <div id="modal" class="modal-backdrop hidden" role="dialog" aria-modal="true" aria-labelledby="modal-title"><div class="modal-card"><button id="modal-close" class="modal-close" aria-label="Tutup">×</button><div id="modal-content"></div></div></div>
+  <script type="module" src="./js/app.js"></script>
+</body>
+</html>
